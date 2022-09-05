@@ -117,3 +117,82 @@ body {
   text-decoration: none;
   text-align: center;
 }
+
+svg {
+  height: 25px;
+  width: 25px;
+  fill: #fff;
+}
+
+.app_header .btn_open_menu {
+  flex: 1;
+  font-size: 15px;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  text-align: left;
+}
+
+.app_header .btn_add_new {
+  flex: 1;
+  font-size: 15px;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  text-align: right;
+}
+
+.app_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 15%;
+}
+
+.category_details {
+  display: flex;
+  gap: 20px;
+  width: 90%;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.category_photo img {
+  width: 75px;
+  height: 75px;
+  background-color: #eee;
+}
+
+.category_name {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+}
+
+.category_name h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+  color: #bcbcbc;
+  flex: 2;
+  margin-top: 5px
+}
+
+.category_name h4 {
+  font-size: 0.8rem;
+  font-weight: normal;
+  margin: 0;
+  color: #bcbcbc;
+  text-align: right;
+  flex: 1;
+}
+
+.category_hr {
+  width: 100%;
+  height: 2px;
+  background-color: #f9f9f9;
+  border: 0;
+}

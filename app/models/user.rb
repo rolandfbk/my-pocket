@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :categories
   has_many :payments
-  validates :name, presence: true, allow_blank: true
+  validates :name, presence: true, length: { maximum: 250 }
 
   def admin?
     role == 'admin'
