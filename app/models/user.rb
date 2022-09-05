@@ -5,4 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :categories
   has_many :payments
+  validates :name, presence: true, allow_blank: true
+
+  def admin?
+    role == 'admin'
+  end
 end
