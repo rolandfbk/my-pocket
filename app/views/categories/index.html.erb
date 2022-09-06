@@ -1,6 +1,6 @@
 <main>
   <div class="app_header">
-    <%= link_to "#", class: "btn_open_menu" do%>
+    <%= link_to "#", class: "btn_open_menu", id: "logout_btn" do%>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
     <% end %>
     <h2>Categories</h2>
@@ -9,21 +9,55 @@
   <div class="app_content">
     <% @categories.each do |category| %>
       <% if can? :manage, category %>
-        <div class="category_details">
-          <div class="category_photo">
-            <% if category.icon.attached? %>
-              <img src="<%= url_for(category.icon) %>" alt="<%= category.name %>">
-            <% else %>
-              <img src="/assets/logo.png" alt="logo" class="no_category_icon" />
-            <% end %>
+        <%= link_to category_path(category.id), class:"category_link" do %>
+          <div class="category_details">
+            <div class="category_photo">
+              <% if category.icon.attached? %>
+                <img src="<%= url_for(category.icon) %>" alt="<%= category.name %>">
+              <% else %>
+                <img src="/assets/logo.png" alt="logo" class="no_category_icon" />
+              <% end %>
+            </div>
+            <div class="category_name fix_span">
+              <h2><span><%= category.name %></span><span class="total_color">$ <%= category.total_payments %></span></h2>
+              <hr class="category_hr">
+              <h4><%= category.created_at.strftime("%d %b %Y") %></h4>
+            </div>
           </div>
-          <div class="category_name">
-            <h2><%= category.name %></h2>
-            <hr class="category_hr">
-            <h4><%= category.created_at.strftime("%d %b %Y") %></h4>
-          </div>
-        </div>
+        <% end %>
       <% end %>
     <% end %>
   </div>
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <% if user_signed_in? %>
+        <div>Hello <%= current_user.name %>!</div>
+        <%= button_to "Logout", destroy_user_session_path, method: :delete, data: { turbo: false }, class:"btn_signout_from" %>
+      <% end %>
+    </div>
+  </div>
 </main>
+
+<script>
+var modal = document.getElementById("myModal");
+
+var btn = document.getElementById("logout_btn");
+
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>

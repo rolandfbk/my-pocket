@@ -17,6 +17,12 @@ class CategoriesController < ApplicationController
     end
   end
 
+  def show
+    @category = Category.find(params[:id])
+    @payments = @category.payments.order(created_at: :desc).all
+    @total_payments = @category.total_payments
+  end
+
   def category_params
     params.require(:category).permit(:name, :icon)
   end
