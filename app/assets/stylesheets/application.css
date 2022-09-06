@@ -13,10 +13,14 @@
  *= require_tree .
  *= require_self
  */
+ @import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
 
 body {
   margin: 0;
   background-color: #f1f3f2;
+  font-family: proxima-nova, sans-serif;
+  font-style: normal;
+  font-weight: 100;
 }
 
 .splash {
@@ -212,6 +216,7 @@ svg {
   justify-content: space-between;
   width: 100%;
   color: #2a2f32;
+  font-size: 15px;
 }
 
 .category_hr {
