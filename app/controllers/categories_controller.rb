@@ -23,6 +23,8 @@ class CategoriesController < ApplicationController
     @total_payments = @category.total_payments
   end
 
+  private
+
   def category_params
     params.require(:category).permit(:name, :icon)
   end
