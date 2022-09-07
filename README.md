@@ -1,24 +1,44 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# My Pocket
 
-Things you may want to cover:
+My Pocket app is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 
-* Ruby version
+## Getting Started
+To get a local copy up and running follow these simple example steps.
 
-* System dependencies
+- Copy this link `https://github.com/rolandfbk/my-pocket`.
+- Get the directory that you want to clone the repository.
+- Open the command prompt in this directory.
+- Write `https://github.com/rolandfbk/my-pocket`.
+- Go to the repository folder in your command prompt `cd my-pocket`.
 
-* Configuration
+- Follow these steps to run the app:
+  - run `gem install`, then run `rails s`
 
-* Database creation
+## Live Demo
 
-* Database initialization
+[Live Demo Link](https://mypocket.herokuapp.com/)
 
-* How to run the test suite
+## Authors
 
-* Services (job queues, cache servers, search engines, etc.)
+👤 **Roland**
 
-* Deployment instructions
+- GitHub: [@rolandfbk](https://github.com/rolandfbk)
+- Twitter: [@rolandfbk](https://twitter.com/rolandfbk)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/roland-ossisa-yuma)
 
-* ...
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- I thank [Gregoire Vella](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) for the beautiful design blueprint.

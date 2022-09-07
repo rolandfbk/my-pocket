@@ -13,3 +13,337 @@
  *= require_tree .
  *= require_self
  */
+@import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
+
+body {
+  margin: 0;
+  background-color: #f1f3f2;
+  font-family: proxima-nova, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+}
+
+.splash {
+  background-color: #3068a9;
+  height: 100vh;
+  width: 100%;
+}
+
+.app_logo {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.app_logo img {
+  height: 150px;
+  width: 150px;
+}
+
+.app_logo h1 {
+  color: #fff;
+}
+
+.user_sign {
+  display: flex;
+  justify-content: center;
+  gap: 15%;
+}
+
+.user_sign a {
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+  background-color: #60b524;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.post_form_element {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 15%;
+}
+
+.input_from {
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  width: 80%;
+}
+
+.app_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #3068a9;
+  color: #fff;
+}
+
+.app_header a {
+  flex: 1;
+  font-size: 15px;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  text-align: left;
+}
+
+.app_header input[type="submit" i] {
+  flex: 1;
+  font-size: 15px;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  background-color: transparent;
+  border: 0;
+  text-align: right;
+}
+
+.app_header h2 {
+  flex: 2;
+  font-size: 25px;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+
+svg {
+  height: 25px;
+  width: 25px;
+  fill: #fff;
+}
+
+.app_header .btn_open_menu {
+  flex: 1;
+  font-size: 15px;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  text-align: left;
+}
+
+.app_header .btn_add_new {
+  flex: 1;
+  font-size: 15px;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  text-align: right;
+}
+
+.app_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 15%;
+  margin-bottom: 10%;
+}
+
+.category_link {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-decoration: none;
+}
+
+.category_details {
+  display: flex;
+  gap: 20px;
+  width: 90%;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.category_photo img {
+  width: 75px;
+  height: 75px;
+  background-color: #eee;
+}
+
+.category_name {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+}
+
+.category_name h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+  color: #bcbcbc;
+  flex: 2;
+  margin-top: 5px;
+}
+
+.category_name h4 {
+  font-size: 0.8rem;
+  font-weight: normal;
+  margin: 0;
+  color: #bcbcbc;
+  text-align: right;
+  flex: 1;
+}
+
+.fix_span h2 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.total_color {
+  color: #2a2f32;
+}
+
+.fix_align h4 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: #2a2f32;
+  font-size: 15px;
+}
+
+.category_hr {
+  width: 100%;
+  height: 2px;
+  background-color: #f9f9f9;
+  border: 0;
+}
+
+.payment_details {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.fix_gap {
+  gap: 0;
+}
+
+.payment_name {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  gap: 5px;
+}
+
+.payment_name h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+  color: #bcbcbc;
+  flex: 2;
+  margin-top: 5px;
+}
+
+.payment_name h4 {
+  font-size: 0.8rem;
+  font-weight: normal;
+  margin: 0;
+  color: #bcbcbc;
+  text-align: right;
+  flex: 1;
+}
+
+.payment_amount {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.payment_amount h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+  color: #2a2f32;
+  flex: 2;
+  margin-top: 5px;
+}
+
+.payment_amount h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+  color: #2a2f32;
+  flex: 1;
+  margin-top: 5px;
+  text-align: right;
+}
+
+.fix_pad {
+  padding: 0;
+  width: 100%;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn_signout_from {
+  width: 100%;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: #60b524;
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+}
+
+.fix_notice {
+  text-align: center;
+  color: #fff;
+}
